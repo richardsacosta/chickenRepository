@@ -1,1 +1,8 @@
-key: val
+AUGMENTATION: True
+IMAGE_SIZE: [224, 224, 3] # as per VGG 16 model
+BATCH_SIZE: 16 #local machine size
+INCLUDE_TOP: False
+EPOCHS: 1
+CLASSES: 2 #cioaccidiasis and healthy clases only 2
+WEIGHTS: imagenet  #classsification model
+LEARNING_RATE: 0.01

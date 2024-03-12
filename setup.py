@@ -9,7 +9,7 @@ __version__ = "0.0.0"
 REPO_NAME = "chickenRepository"
 AUTHOR_USER_NAME = "richardsacosta"
 SRC_REPO = "cnnClassifier"
-AUTHOR_EMAIL = "entbappy73@gmail.com"
+AUTHOR_EMAIL = "richardsacosta@gmail.com"
 
 
 setuptools.setup(
