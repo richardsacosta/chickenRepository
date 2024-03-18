@@ -115,8 +115,21 @@ open up you local host and port
 
 	newgrp docker
 	
+	docker --version #to verify it was installed
+	
 # 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> then run command one by one
+ # Execute the following commnad in AWS console to connect with GitHub repository
+ # 1.Create a folder
+$ mkdir actions-runner && cd actions-runner# Download the latest runner package
+$ curl -o actions-runner-linux-x64-2.314.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.314.1/actions-runner-linux-x64-2.314.1.tar.gz# Optional: Validate the hash
+$ echo "6c726a118bbe02cd32e222f890e1e476567bf299353a96886ba75b423c1137b5  actions-runner-linux-x64-2.314.1.tar.gz" | shasum -a 256 -c# Extract the installer
+$ tar xzf ./actions-runner-linux-x64-2.314.1.tar.gz
+
+# 2.Create the runner and start the configuration experience
+$ ./config.sh --url https://github.com/richardsacosta/chickenRepository --token A3SJR23Y4EYKDZWAGJRPFPLF7DHPO# Last step, run it!
+$ ./run.sh
+
 
 
 # 7. Setup github secrets:
